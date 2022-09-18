@@ -9,10 +9,11 @@ function addList (event) {
     const li = document.createElement("li");
     toDoList.appendChild(li);
     const textbox = toDoListText.value;
-    toDoList.firstChild.innerText = textbox;
-    listArray.push =  toDoList.firstChild.innerText;
-    console.log(toDoList.firstChild.innerText);
-    console.log(listArray[0]);
+    li.innerText = textbox;
+    listArray[listArray.length] = textbox;
+    console.log(li.innerText);
+    toDoListText.value = null;
+
 }
 
 toDoListForm.addEventListener("submit",addList);
